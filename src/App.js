@@ -12,10 +12,11 @@ import Footer from "./Components/Footer.js";
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
+  const [search, setSearch] = useState("");
 
   return (
     <Router>
-      <Navbar cartCount={cartCount} />
+      <Navbar cartCount={cartCount} search={search} setSearch={setSearch} />
       <Routes>
         <Route path="/" element={<Slider />}></Route>
       </Routes>
@@ -32,7 +33,11 @@ function App() {
         <Route
           path="/products/:id"
           element={
-            <ProductDetails cartCount={cartCount} setCartCount={setCartCount} />
+            <ProductDetails
+              cartCount={cartCount}
+              setCartCount={setCartCount}
+              search={search}
+            />
           }
         ></Route>
       </Routes>

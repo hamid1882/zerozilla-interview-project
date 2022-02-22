@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Cart from "../Images/cart.png";
 import Profile from "../Images/profile.png";
 import axios from "axios";
 import Loader from "./Loader";
 
-const Navbar = ({ cartCount }) => {
+const Navbar = ({ cartCount, search, setSearch }) => {
   const [products, setProducts] = useState([]);
-  const [search, setSearch] = useState("");
   const [loader, setLoader] = useState(false);
 
   const URL = "https://fakestoreapi.com/products";
@@ -41,14 +40,6 @@ const Navbar = ({ cartCount }) => {
       return null;
     }
   });
-
-  const navigate = useNavigate();
-  const params = useParams();
-
-  const handleNavigate = () => {
-    setSearch("");
-    navigate(params.id);
-  };
 
   useEffect(() => {
     handleProductDetails();
@@ -84,6 +75,7 @@ const Navbar = ({ cartCount }) => {
             className="border-0 search p-2 col col-11"
             type="search"
             placeholder="Search"
+            value={search}
             onChange={handleSearchValue}
           />
         </div>
@@ -117,6 +109,7 @@ const Navbar = ({ cartCount }) => {
           className="border-0 w-100 search p-2"
           type="search"
           placeholder="Search"
+          value={search}
           onChange={handleSearchValue}
         />
       </div>
@@ -134,7 +127,7 @@ const Navbar = ({ cartCount }) => {
                 >
                   <div
                     className="d-flex align-items-center gap-4 search-product p-2 container rounded my-2"
-                    onClick={handleNavigate}
+                    onClick={() => setSearch("")}
                   >
                     <img
                       style={{ height: "65px", width: "65px" }}

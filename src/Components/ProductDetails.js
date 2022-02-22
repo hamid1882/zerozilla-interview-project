@@ -7,7 +7,7 @@ import Added from "../Images/added.png";
 
 import Loader from "./Loader";
 
-const ProductDetails = ({ cartCount, setCartCount }) => {
+const ProductDetails = ({ cartCount, setCartCount, search }) => {
   const [productDetails, getProductDetails] = useState([]);
   const [rate, setRate] = useState(0);
   const [loader, setLoader] = useState(false);
@@ -40,7 +40,7 @@ const ProductDetails = ({ cartCount, setCartCount }) => {
     },
 
     // eslint-disable-next-line
-    []
+    [search]
   );
 
   const options = {
