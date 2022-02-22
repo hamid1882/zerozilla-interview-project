@@ -37,6 +37,8 @@ const ProductDetails = ({ cartCount, setCartCount, search }) => {
   useEffect(
     () => {
       handleProductDetails();
+
+      setIsAddedToCart(false);
     },
 
     // eslint-disable-next-line
