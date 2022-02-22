@@ -22,7 +22,9 @@ const Navbar = ({ cartCount }) => {
       .then(function (response) {
         setLoader(true);
         setProducts(response.data);
-        setLoader(false);
+        setTimeout(() => {
+          setLoader(false);
+        }, 1500);
       })
       .catch(function (error) {
         console.log(error);
