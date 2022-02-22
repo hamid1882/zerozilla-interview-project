@@ -15,7 +15,9 @@ const Categories = () => {
       .then(function (response) {
         setLoader(true);
         setCategory(response.data);
-        setLoader(false);
+        setTimeout(() => {
+          setLoader(false);
+        }, 2000);
       })
       .catch(function (error) {
         console.log(error);

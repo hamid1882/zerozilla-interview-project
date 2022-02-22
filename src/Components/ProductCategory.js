@@ -17,7 +17,9 @@ const ProductCategory = () => {
       .then(function (response) {
         setLoader(true);
         setProduct(response.data);
-        setLoader(false);
+        setTimeout(() => {
+          setLoader(false);
+        }, 2000);
       })
       .catch(function (error) {
         console.log(error);

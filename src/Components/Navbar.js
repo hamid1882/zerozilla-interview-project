@@ -74,12 +74,12 @@ const Navbar = ({ cartCount }) => {
         <div className="col col-8 d-none d-md-block border p-2 rounded shadow mx-2 d-flex align-items-center">
           <img
             style={{ height: "20px", width: "20px" }}
-            className="mx-1 "
+            className="mx-1 col col-3"
             src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-search-ui-dreamstale-lineal-dreamstale.png"
             alt="search icon"
           />
           <input
-            className="border-0 w-75 search p-2 "
+            className="border-0 search p-2 col col-11"
             type="search"
             placeholder="Search"
             onChange={handleSearchValue}

@@ -24,7 +24,9 @@ const ProductDetails = ({ cartCount, setCartCount }) => {
         setLoader(true);
         getProductDetails(response.data);
         setRate(response.data.rating.rate);
-        setLoader(false);
+        setTimeout(() => {
+          setLoader(false);
+        }, 2000);
       })
       .catch(function (error) {
         console.log(error);
