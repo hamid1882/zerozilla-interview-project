@@ -8,6 +8,7 @@ import "./App.css";
 import ProductDetails from "./Components/ProductDetails.js";
 import Cart from "./Components/Cart.js";
 import Profile from "./Components/Profile.js";
+import Footer from "./Components/Footer.js";
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -41,6 +42,7 @@ function App() {
       <Routes>
         <Route path="/profile" element={<Profile />}></Route>
       </Routes>
+      <Footer />
     </Router>
   );
 }
