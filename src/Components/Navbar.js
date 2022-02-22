@@ -47,12 +47,12 @@ const Navbar = ({ cartCount, search, setSearch }) => {
 
   return (
     <>
-      <div className="d-flex container-fluid h-25 justify-content-between align-items-center">
-        <Link to="/" className="d-none d-md-block">
+      <div className="d-flex container-fluid h-25 justify-content-between align-items-center sticky-md-top bg-light">
+        <Link to="/" className="d-none d-md-block ">
           <img
             className="col col-3 rounded-circle my-2"
             style={{ height: "100px", width: "100px" }}
-            src="https://www.openbusinesscouncil.org/wp-content/uploads/2020/07/e-commerce-definizione-cos-e.jpg"
+            src="https://i.pinimg.com/originals/58/d4/1b/58d41bb62483f837f04b4399c0560e0d.jpg"
             alt="logo"
           />
         </Link>
@@ -60,7 +60,7 @@ const Navbar = ({ cartCount, search, setSearch }) => {
           <img
             className="col col-3 rounded-circle my-2"
             style={{ height: "50px", width: "50px" }}
-            src="https://www.openbusinesscouncil.org/wp-content/uploads/2020/07/e-commerce-definizione-cos-e.jpg"
+            src="https://i.pinimg.com/originals/58/d4/1b/58d41bb62483f837f04b4399c0560e0d.jpg"
             alt="logo"
           />
         </Link>
